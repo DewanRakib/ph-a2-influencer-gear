@@ -36,6 +36,7 @@ section {
   margin: 50px auto;
   padding: 0 25px;
 }
+
 footer {
   text-align: center;
 }
@@ -119,11 +120,18 @@ nav {
 }
 
 /* Logo Section */
-.logo-gallery {
+.logo-list {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-around;
+  border-top: 1px solid #787885;
+  border-bottom: 1px solid #787885;
+  padding-top: 8px;
 }
+
+.logo-list li {
+  list-style: none;
+}
+
 /* Product List Section */
 .section-title {
   text-align: center;
@@ -159,9 +167,11 @@ nav {
 .fa-star {
   color: #ffc014;
 }
+
 .fa-star-half-alt {
   color: #ffc014;
 }
+
 .additional {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -221,4 +231,44 @@ footer > .logo {
 
 .icon:hover a {
   color: #e02c6d;
+}
+
+/*----------------------
+    Media Queries CSS
+------------------------*/
+
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 90%;
+  }
+
+  .navigation-links,
+  .logo-gallery {
+    display: none;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .banner,
+  .social-feed {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .banner-left {
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 688px) and (max-width: 900px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav {
+    flex-direction: column;
+  }
 }
