@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700&family=Poppins:wght@500;600;700&family=Roboto:wght@700&display=swap");
 
-/* font-family: 'Inter', sans-serif;
-font-family: 'Manrope', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif; */
-
 /* Common CSS */
 
 * {
@@ -208,6 +203,10 @@ footer > .logo {
   text-decoration: none;
   color: white;
 }
+
+footer a:hover {
+  color: #e02c6d;
+}
 .footer-text {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
@@ -229,20 +228,22 @@ footer > .logo {
   color: white;
 }
 
-.icon:hover a {
-  color: #e02c6d;
-}
-
 /*----------------------
     Media Queries CSS
 ------------------------*/
 
 @media only screen and (max-width: 688px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
   .container {
     width: 90%;
   }
 
-  .navigation-links,
   .logo-gallery {
     display: none;
   }
@@ -261,6 +262,8 @@ footer > .logo {
 
   .banner-left {
     padding-top: 50px;
+    padding-left: 50px;
+    text-align: center;
   }
 }
 
